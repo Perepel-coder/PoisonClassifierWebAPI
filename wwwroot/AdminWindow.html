@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="CSS/mystyle.css" />
+    <link type="text/css" rel="stylesheet" href="CSS/layoutstyle.css" />
+    <title>Страница администратора</title>
+</head>
+<body class="flexrow" onload="Load()">
+    <div class="icon-bar">
+        <a href="Index.html"><i class="fa fa-reply "></i></a>
+    </div>
+    <div class="container">
+        <header><h1>Классификатор ядов - страница администратора</h1></header>
+        <section class="flexrow">
+            <section class="flexcolumn" style="width: 70%; padding:0.5%;">
+                <h class="inputsub">Таблица веществ</h>
+                <div class="border" style="height: 350px; overflow-x: scroll; overflow-y: scroll; margin-top: 1%;">
+                    <table id="subtable">
+                        <thead><tr><th>Имя</th><th>Класс</th><th>Раздел</th><th>Группа</th>
+                            <th>Подгруппа</th><th>Классификации</th><th>🖊</th><th>🗑</th></tr></thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="flexcolumn" style="width:30%; padding:0.5%;">
+                <section class="flexcolumn" style="width:97%;">
+                    <h class="inputsub">Система поиска</h>
+                    <button onclick="ChemicalClassifier();" class="buttonview">Химичекий классификатор</button>
+                    <button onclick="PathClassifier()" class="buttonview">Классификатор путей</button>
+                    <button onclick="ClassifierSymptoms()" class="buttonview">Классификатор симптомов</button>
+                    <button onclick="ToxicClassifier()" class="buttonview">Токсический классификатор</button>
+                </section>
+                <h class="inputsub">Дополнительные таблицы</h>
+                <section class="flexcolumn" style="width:97%;">
+                    <section class="flexrow">
+                        <button onclick="CreatPathTable()" class="buttonview" style="width:50%; margin-right:1%;"> Пути проникновения</button>
+                        <button onclick="CreatAggregateStateTable()" class="buttonview" style="width: 50%;"> Агрегатное состояние</button>
+                    </section>
+
+                    <section class="flexrow">
+                        <button onclick="CreatDegreeImpactTable()" class="buttonview" style="width: 50%; margin-right: 1%;">Степень воздействия</button>
+                        <button onclick="CreatNatureImpactTable()" class="buttonview" style="width:50%">Характер влияния</button>
+                    </section>
+
+                    <section class="flexrow">
+                        <button onclick="CreatOrigionTable()" class="buttonview" style="width: 50%; margin-right: 1%;">Происхождение</button>
+                        <button onclick="CreatSubstanceClassTable()" class="buttonview" style="width:50%;">Класс вещества</button>
+                    </section>
+                    <section class="flexrow">
+                        <button onclick="CreatSymptomTable()" class="buttonview" style="width: 50%; margin-right: 1%;">Симптомы</button>
+                        <button onclick="CreatOrganTable()" class="buttonview" style="width:50%;">Органы</button>
+                    </section>
+                </section>
+            </section>
+        </section>
+        <footer>
+            <input class="inputsub" type="button" value="Добавить вещество" onclick="AddData()">
+        </footer>
+    </div>
+    <script src="JavaScripts/AdminWindow.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="CSS/mystyle.css" />
+    <link type="text/css" rel="stylesheet" href="CSS/layoutstyle.css" />
+    <title>Классификатор путей</title>
+</head>
+<body class="flexrow" onload="Load()">
+    <div class="icon-bar">
+        <a href="#" onclick="history.go(-1); return false;"><i class="fa fa-reply"></i></a>
+    </div>
+    <div class="container">
+        <header><h1>Классификатор путей</h1></header>
+        <section class="flexrow">
+            <section class="border" style=" width:20%; padding: 1%;">
+                <section class="flexcolumn">
+                    <h class="inputsub">Название пути</h>
+                    <select id="pathname" class="drop-down-list"></select>
+                    <h>Вывод из организма</h>
+                    <select id="pathoutput" class="drop-down-list"></select>
+                    <section class="flexcolumn">
+                        <h class="inputsub">Органы</h>
+                        <div class="border" style="height: 240px; overflow-x: scroll; overflow-y: scroll;">
+                            <table>
+                                <thead><tr><th>Орган</th><th>⚐</th></tr></thead>
+                                <tbody id="organTable">
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <h>Режим</h>
+                    <select id="mode" class="drop-down-list">
+                        <option>Все условия</option>
+                        <option>Хотя бы одно условие</option>
+                    </select>
+                </section>
+            </section>
+            <section class="flexcolumn" style=" width: 75%; padding: 1%;">
+                <h class="inputsub">Вещества:</h>
+                <div class="border" style="height: 370px; overflow-x: scroll; overflow-y: scroll;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Имя</th>
+                                <th>Класс</th>
+                                <th>Раздел</th>
+                                <th>Группа</th>
+                                <th>Подгруппа</th>
+                                <th>Классификации</th>
+                            </tr>
+                        </thead>
+                        <tbody id="subtable">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </section>
+        <footer>
+            <button class="buttonview" onclick="SearchButton();">Поиск 🔍</button>
+        </footer>
+    </div>
+    <script src="JavaScripts/PathClassifier.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="CSS/mystyle.css" />
+    <link type="text/css" rel="stylesheet" href="CSS/layoutstyle.css" />
+    <title>Страница администратора</title>
+</head>
+<body class="flexrow" onload="Load()">
+    <div class="icon-bar">
+        <a href="AdminWindow.html"><i class="fa fa-reply"></i></a>
+    </div>
+    <section class="flexcolumn">
+        <div class="container">
+            <header><h1>Добавление/Редактирование информации</h1></header>
+            <section class="flexrow">
+                <section class="border" style="width:15%; padding:1%; border-left:none;">
+                    <section class="flexcolumn">
+                        <h>Название:</h>
+                        <input type="text" id="namesub" class="inputsub">
+                        <h>Класс:</h>
+                        <select id="classub" class="drop-down-list"></select>
+                        <h>Раздел:</h>
+                        <select id="chaptersub" class="drop-down-list"></select>
+                        <h>Группа:</h>
+                        <select id="groupsub" class="drop-down-list"></select>
+                        <h>Подгруппа:</h>
+                        <select id="subgroupsub" class="drop-down-list"></select>
+                    </section>
+                </section>
+                <section class="flexcolumn" style="width:85%; padding: 1%;">
+                    <section class="flexrow">
+                        <section class="flexcolumn" style="width: 75%;">
+                            <h class="inputsub">Пути проникновения</h>
+                            <div class="border" style="height: 170px; overflow-x: scroll; overflow-y: scroll;">
+                                <table id="pathTable">
+                                    <thead><tr><th>№</th><th>Название</th><th>Путь</th><th>Вывод</th><th>⚐</th></tr></thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <section class="flexcolumn" style="width: 25%; padding-left: 1%; padding-right: 1%;">
+                            <h class="inputsub">Симптомы</h>
+                            <div class="border" style="height: 170px; overflow-x: scroll; overflow-y: scroll;">
+                                <table id="symptomTable">
+                                    <thead><tr><th>№</th><th>Симптом</th><th>⚐</th></tr></thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </section>
+                    <section class="flexrow">
+                        <section class="flexcolumn" style="padding:1%;">
+                            <h class="inputsub">Степень токсичности</h>
+                            <input type="text" id="class1" class="inputsub">
+                            <input type="text" id="class2" class="inputsub">
+                            <input type="text" id="class3" class="inputsub">
+                            <input type="text" id="class4" class="inputsub">
+                        </section>
+                        <section class="flexcolumn" style="padding:1%;">
+                            <h class="inputsub">Характер воздействия</h>
+                            <select id="natureImpactGroupName" class="drop-down-list"></select>
+                            <select id="natureImpactGroupDescription" class="drop-down-list"></select>
+                            <select id="natureImpactGroupNameSG" class="drop-down-list"></select>
+                        </section>
+                        <section class="flexcolumn" style="padding:1%;">
+                            <h class="inputsub">Степень воздействия</h>
+                            <select class="drop-down-list" id="degreeImpactClass"></select>
+                            <select class="drop-down-list" id="degreeImpactComment"></select>
+                        </section>
+                    </section>
+                    <section class="flexrow">
+                        <section class="flexcolumn" style="padding:1%;">
+                            <h class="inputsub">Происхождение</h>
+                            <select class="drop-down-list" id="origionGroup"></select>
+                            <select class="drop-down-list" id="origionSubGroup"></select>
+                        </section>
+                        <section class="flexcolumn" style="padding:1%;">
+                            <h class="inputsub">Агрегатное состояние</h>
+                            <select class="drop-down-list" id="aggregateState"></select>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <footer>
+                <button class="buttonview" onclick="SaveData()">Сохранить</button>
+            </footer>
+        </div>
+    </section>
+    <script src="JavaScripts/AdminData.js"></script>
+</body>
+</html>

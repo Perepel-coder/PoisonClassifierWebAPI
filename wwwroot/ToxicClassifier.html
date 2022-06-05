@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!--адаптирует к различным видам экрана-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="CSS/mystyle.css" />
+    <link type="text/css" rel="stylesheet" href="CSS/layoutstyle.css" />
+    <title>Токсический классификатор</title>
+</head>
+<body class="flexrow" onload="Load();">
+    <div class="icon-bar">
+        <a href="#" onclick="history.go(-1); return false;"><i class="fa fa-reply"></i></a>
+    </div>
+    <section class="flexcolumn">
+        <div class="container">
+            <header><h1>Токсический классификатор ядовитых веществ</h1></header>
+            <section class="flexrow">
+                <section class="border" style="width:15%; padding:1%; border-left:none;">
+                    <section class="flexcolumn">
+                        <section class="flexcolumn">
+                            <h class="inputsub">Степень токсичности</h>
+                            <input type="text" id="class1" class="inputsub">
+                            <input type="text" id="class2" class="inputsub">
+                            <input type="text" id="class3" class="inputsub">
+                            <input type="text" id="class4" class="inputsub">
+                            <h class="inputsub">Степень воздействия</h>
+                            <select class="drop-down-list" id="degreeImpactClass"></select>
+                            <select class="drop-down-list" id="degreeImpactComment"></select>
+                            <h class="inputsub">Агрегатное состояние</h>
+                            <select class="drop-down-list" id="aggregateState"></select>
+                        </section>
+                        <select id="mode" class="drop-down-list">
+                            <option>Все условия</option>
+                            <option>Хотя бы одно условие</option>
+                        </select>
+                    </section>
+                </section>
+                <section style="width:80%; padding: 1%;">
+                    <h>Таблица веществ</h>
+                    <div class="border" style="margin-top:3px; height:380px; overflow-x: scroll; overflow-y: scroll;">
+                        <table>
+                            <thead><tr><th>Имя</th><th>Класс</th><th>Раздел</th><th>Группа</th><th>Подгруппа</th><th>Классификации</th></tr></thead>
+                            <tbody id="subtable">
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </section>
+            <footer>
+                <button class="buttonview" onclick="SearchButton();">Поиск 🔍</button>
+            </footer>
+        </div>
+    </section>
+    <script src="JavaScripts/ToxicClassifier.js"></script>
+</body>
+</html>

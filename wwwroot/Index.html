@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!--адаптирует к различным видам экрана-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="CSS/mystyle.css" />   <!--подключает таблицу стилей-->
+    <link type="text/css" rel="stylesheet" href="CSS/layoutstyle.css" />   <!--подключает таблицу стилей-->
+    <title>Главная страница</title>
+</head>
+<body class="flexrow" onload="GetSubstances();">
+    <div class="icon-bar">
+        <div class="p-menu">
+            <a href="#"><i class="fa fa-user-circle"></i></a>
+            <section class="v-menu-content" style="padding:1%; ">
+                <section class="flexcolumn">
+                    <h>Логин:</h>
+                    <input type="text" id="login" class="inputsub">
+                    <h>Пароль:</h>
+                    <input type="password" id="password" class="inputsub">
+                    <button onclick="Autorization();" class="buttonview">Авторизация</button>
+                </section>
+            </section>
+        </div>
+    </div>
+    <div class="container">
+        <header><h1>Классификатор ядов</h1></header>
+        <section class="flexrow" style="padding:1%;">
+            <section class="flexcolumn" style=" width:80%; padding-right:1%;">
+                <section class="flexrow">
+                    <input type="text" id="search" class="inputsub" style="text-align: left; width: 95%" placeholder="Search...">
+                    <input type="button" value="🔍" onclick="Search()" class="inputsub" style="margin-left:1%;" />
+                </section>
+                <div class="border" style="height: 380px; overflow-x: scroll; overflow-y: scroll; margin-top: 1%;">
+                    <table>
+                        <thead><tr><th>Имя</th><th>Класс</th><th>Раздел</th><th>Группа</th><th>Подгруппа</th><th>Классификации</th></tr></thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="flexcolumn" style="text-align:center; width:20%; padding-right:2%;">
+                <button onclick="ChemicalClassifier();" class="buttonview">Химичекий классификатор</button>
+                <button onclick="PathClassifier()" class="buttonview">Классификатор путей</button>
+                <button onclick="ClassifierSymptoms()" class="buttonview">Классификатор симптомов</button>
+                <button onclick="ToxicClassifier()" class="buttonview">Токсический классификатор</button>
+            </section>
+        </section>
+    </div>
+    <script src="JavaScripts/Index.js"></script>
+</body>
+</html>

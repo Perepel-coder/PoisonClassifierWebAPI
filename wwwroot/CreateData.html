@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!--адаптирует к различным видам экрана-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="CSS/mystyle.css" />
+    <link type="text/css" rel="stylesheet" href="CSS/layoutstyle.css" />
+    <title>Заполнение даных промежуточных таблиц</title>
+</head>
+<body class="flexrow" onload="Load();">
+    <div class="icon-bar">
+        <a onclick="Clear()" href="AdminWindow.html"><i class="fa fa-reply"></i></a>
+    </div>
+    <section class="flexcolumn">
+        <div class="container">
+            <header><h1>Заполнение данных промежуточных таблиц</h1></header>
+            <section class="flexrow">
+                <section class="border" style="width:30%; padding:1%">
+                    <section class="flexcolumn" id="creatData" style="">
+                        <h class="inputsub">Редактирование/Добавление данных</h>
+                    </section>
+                </section>
+                <section class="flexcolumn" style="width: 65%; padding: 1%;">
+                    <h class="inputsub">Данные базы данных</h>
+                    <div class="border" style="height: 400px; overflow-x: scroll; overflow-y: scroll;">
+                        <table id="tableOutput">
+                            <tbody id="bodyTable">
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </section>
+    <script src="JavaScripts/CreateData.js"></script>
+</body>
+</html>

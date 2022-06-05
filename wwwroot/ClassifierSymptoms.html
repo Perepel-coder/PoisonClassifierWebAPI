@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!--адаптирует к различным видам экрана-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="CSS/mystyle.css" />
+    <link type="text/css" rel="stylesheet" href="CSS/layoutstyle.css" />
+    <title>Классификатор симптомов</title>
+</head>
+<body class="flexrow" onload="Load();">
+    <div class="icon-bar">
+        <a href="#" onclick="history.go(-1); return false;"><i class="fa fa-reply"></i></a>
+    </div>
+    <section class="flexcolumn">
+        <div class="container">
+            <header><h1>Классификатор симптомов ядовитых веществ</h1></header>
+            <section class="flexrow">
+                <section class="border" style="width:20%; padding:1%; border-left:none;">
+                    <section class="flexcolumn">
+                        <section class="flexcolumn" style="padding:1%;">
+                            <h class="inputsub">Характер воздействия</h>
+                            <select id="natureImpactGroupName" class="drop-down-list"></select>
+                            <select id="natureImpactGroupDescription" class="drop-down-list"></select>
+                            <select id="natureImpactGroupNameSG" class="drop-down-list"></select>
+
+                            <h class="inputsub">Происхождение</h>
+                            <select class="drop-down-list" id="origionGroup"></select>
+                            <select class="drop-down-list" id="origionSubGroup"></select>
+
+                            <h class="inputsub">Симптомы</h>
+                            <div class="border" style="height: 170px; overflow-y: scroll;">
+                                <table>
+                                    <thead><tr><th>№</th><th>Симптом</th><th>⚐</th></tr></thead>
+                                    <tbody id="symptomTable">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <select id="mode" class="drop-down-list">
+                            <option>Все условия</option>
+                            <option>Хотя бы одно условие</option>
+                        </select>
+                    </section>
+                </section>
+                <section style="width:75%; padding: 1%;">
+                    <h>Таблица веществ</h>
+                    <div class="border" style="margin-top:3px; height:480px; overflow-x: scroll; overflow-y: scroll;">
+                        <table>
+                            <thead><tr><th>Имя</th><th>Класс</th><th>Раздел</th><th>Группа</th><th>Подгруппа</th><th>Классификации</th></tr></thead>
+                            <tbody id="subtable">
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </section>
+            <footer>
+                <button class="buttonview" onclick="SearchButton();">Поиск 🔍</button>
+            </footer>
+        </div>
+    </section>
+    <script src="JavaScripts/ClassifierSymptoms.js"></script>
+</body>
+</html>

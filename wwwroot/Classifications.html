@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!--адаптирует к различным видам экрана-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="CSS/mystyle.css" />
+    <link type="text/css" rel="stylesheet" href="CSS/layoutstyle.css" />
+    <title>Классификации</title>
+</head>
+<body class="flexrow" onload="Load();">
+    <div class="icon-bar">
+        <a href="#" onclick="history.go(-1); return false;"><i class="fa fa-reply"></i></a>
+    </div>
+    <section class="flexcolumn">
+        <div class="container">
+            <header><h1>Промышленный классификатор ядовитых веществ</h1></header>
+            <section class="flexrow">
+                <section class="border" style="width:15%; padding:1%; border-left:none;">
+                    <section class="flexcolumn">
+                        <h>Название:</h>
+                        <input type="text" name="namesub" class="inputsub" readonly>
+                        <h>Класс:</h>
+                        <input type="text" name="classub" class="inputsub" readonly>
+                        <h>Раздел:</h>
+                        <input type="text" name="chaptersub" class="inputsub" readonly>
+                        <h>Группа:</h>
+                        <input type="text" name="groupsub" class="inputsub" readonly>
+                        <h>Подгруппа:</h>
+                        <input type="text" name="subgroupsub" class="inputsub" readonly>
+                    </section>
+                </section>
+                <section class="flexcolumn" style="width: 85%; padding: 1%;">
+                    <section class="flexrow">
+                        <section class="flexcolumn" style="width: 80%;">
+                            <h class="inputsub">Пути проникновения</h>
+                            <div class="border" style="height: 170px; overflow-x: scroll; overflow-y: scroll;">
+                                <table id="pathTable">
+                                    <thead><tr><th>№</th><th>Название</th><th>Путь</th><th>Вывод</th></tr></thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <section class="flexcolumn" style="width: 20%; padding-left: 1%; padding-right: 1%;">
+                            <h class="inputsub">Симптомы</h>
+                            <div class="border" style="height: 170px; overflow-x: scroll; overflow-y: scroll;">
+                                <table name="symptomTable">
+                                    <thead><tr><th>№</th><th>Симптом</th></tr></thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </section>
+                    <selection class="flexrow">
+                        <section class="flexcolumn" style="padding:1%;">
+                            <h class="inputsub">Степень токсичности</h>
+                            <input type="text" name="class1" class="inputsub" readonly>
+                            <input type="text" name="class2" class="inputsub" readonly>
+                            <input type="text" name="class3" class="inputsub" readonly>
+                            <input type="text" name="class4" class="inputsub" readonly>
+                        </section>
+                        <section class="flexcolumn" style="padding:1%;">
+                            <h class="inputsub">Характер воздействия</h>
+                            <input type="text" name="natureImpactGroupName" class="inputsub" readonly>
+                            <input type="text" name="natureImpactGroupDescription" class="inputsub" readonly>
+                            <input type="text" name="natureImpactGroupNameSG" class="inputsub" readonly>
+                        </section>
+                        <section class="flexcolumn" style="padding:1%;">
+                            <h class="inputsub">Степень воздействия</h>
+                            <input type="text" name="degreeImpactClass" class="inputsub" readonly>
+                            <input type="text" name="degreeImpactComment" class="inputsub" readonly>
+                        </section>
+                    </selection>
+                </section>
+            </section>
+        </div>
+        <div class="container">
+            <header><h1>Химический классификатор ядовитых веществ</h1></header>
+            <section class="flexrow">
+                <section class="border" style="width:15%; padding:1%; border-left:none;" name="substance">
+                    <section class="flexcolumn">
+                        <h>Название:</h>
+                        <input type="text" name="namesub" class="inputsub" readonly>
+                        <h>Класс:</h>
+                        <input type="text" name="classub" class="inputsub" readonly>
+                        <h>Раздел:</h>
+                        <input type="text" name="chaptersub" class="inputsub" readonly>
+                        <h>Группа:</h>
+                        <input type="text" name="groupsub" class="inputsub" readonly>
+                        <h>Подгруппа:</h>
+                        <input type="text" name="subgroupsub" class="inputsub" readonly>
+                    </section>
+                </section>
+                <section class="flexcolumn" style="width:80%; padding: 1%;">
+                    <section class="flexrow">
+                        <section class="flexcolumn" style="padding-right:1%;">
+                            <h class="inputsub">Симптомы</h>
+                            <div class="border" style="height: 170px; overflow-x: scroll; overflow-y: scroll;">
+                                <table name="symptomTable">
+                                    <thead><tr><th>№</th><th>Симптом</th></tr></thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </section>
+                    <selection class="flexrow">
+                        <section class="flexcolumn" style="padding:1%; width:170%;">
+                            <h class="inputsub">Характер воздействия</h>
+                            <input type="text" name="natureImpactGroupName" class="inputsub" readonly>
+                            <input type="text" name="natureImpactGroupDescription" class="inputsub" readonly>
+                            <input type="text" name="natureImpactGroupNameSG" class="inputsub" readonly>
+                        </section>
+                        <section class="flexcolumn" style="padding:1%;">
+                            <h class="inputsub">Происхождение</h>
+                            <input type="text" name="origionGroup" class="inputsub" readonly>
+                            <input type="text" name="origionSubGroup" class="inputsub" readonly>
+                        </section>
+                        <section class="flexcolumn" style="padding:1%;">
+                            <h class="inputsub">Агрегатное состояние</h>
+                            <input type="text" name="aggregateState" class="inputsub" readonly>
+                        </section>
+                    </selection>
+                </section>
+            </section>
+        </div>
+    </section>
+    <script src="JavaScripts/Classifications.js"></script>
+</body>
+</html>
